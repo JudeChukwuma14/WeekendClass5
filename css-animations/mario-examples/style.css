@@ -1,0 +1,135 @@
+/*// BASE STYLES //*/
+
+html, body{
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.grass, .sky, .road{
+  position: relative;
+}
+
+.sky{
+  height: 40%;
+  background: skyblue;
+}
+
+.grass{
+  height: 30%;
+  background: seagreen;
+}
+
+.road{
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+
+.lines{
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+
+/*// ELEMENTS TO ANIMATE //*/
+/* .cloud{
+  position: absolute;
+}
+.cloud:nth-child(1){
+  width: 200px;
+  top: 100px;
+  opacity: 0.5;
+  animation: wind 80s infinite reverse linear;
+}
+.cloud:nth-child(2){
+  top: 0;
+  animation: wind 80s infinite reverse linear;
+}
+
+.mario{
+  position: absolute;
+  width: 100px;
+  top: -120px;
+  left: 0;
+  animation-name: drive;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.luigi{
+  position: absolute;
+  left: 0;
+  top: -50px;
+  width: 100px;
+  animation-name: drive;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+} */
+
+/* / */ 
+
+.cloud{
+  position: absolute;
+}
+.cloud:nth-child(1){
+  width: 90px;
+  top: 100px;
+  opacity: 0.5;
+  animation: move 80s infinite reverse linear;
+}
+.cloud:nth-child(2){
+  top: 0;
+  animation: move 80s infinite reverse linear;
+}
+
+.mario{
+width: 100px;
+position: absolute;
+left: 0;
+top: -140px;
+transition: 3s linear;
+animation-name: drive;
+animation-duration: 5s;
+/* animation-delay: 4s; */
+animation-fill-mode: forwards;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+
+
+.luigi{
+  position: absolute;
+  top: -40px;
+  width: 100px;
+  animation-name: drive;
+  animation-duration: 6s;
+  /* animation-direction: alternate; */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+/*// KEYFRAMES //*/
+@keyframes drive {
+  from{transform: translateX(-100px);}
+  to{transform: translateX(1200px);}
+}
+@keyframes move{
+  from{transform: translatex(-120px);}
+  to{transform: translatex(1000px);}
+}
+

@@ -1,0 +1,24 @@
+
+
+
+.round{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    transition-duration: 3s;
+    /* transition-delay: 4s; */
+    transition-timing-function: linear;
+    /* transform: translateX(50px); */
+   
+}
+
+.round:hover{
+background-color: green;
+transform: translate(100px) rotate(360deg);
+}
